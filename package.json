@@ -1,14 +1,14 @@
 {
-    "name": "@fuse/starter",
+    "name": "cota",
     "version": "13.4.0",
-    "description": "Fuse - Angular Admin Template and Starter Project",
-    "author": "https://themeforest.net/user/srcn",
+    "description": "Desarrollo de Sistema de Control de Operación y Transferencia de Agua",
+    "author": "Muñoz Daniel | Marcia Pichun",
     "license": "https://themeforest.net/licenses/standard",
     "private": true,
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
-        "build": "ng build",
+        "start": "ng serve --max_old_space_size=8192",
+        "build": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --configuration=production --output-hashing=all",
         "test": "ng test",
         "lint": "ng lint"
     },
