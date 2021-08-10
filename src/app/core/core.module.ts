@@ -5,27 +5,18 @@ import { TranslocoCoreModule } from 'app/core/transloco/transloco.module';
 import { CoreRoutingModule } from './core.router';
 
 @NgModule({
-    imports: [
-        AuthModule,
-        IconsModule,
-        TranslocoCoreModule,
-        // Lazy load
-        CoreRoutingModule
-    ]
+    imports: [AuthModule, IconsModule, TranslocoCoreModule],
 })
-export class CoreModule
-{
+export class CoreModule {
     /**
      * Constructor
      */
-    constructor(
-        @Optional() @SkipSelf() parentModule?: CoreModule
-    )
-    {
+    constructor(@Optional() @SkipSelf() parentModule?: CoreModule) {
         // Do not allow multiple injections
-        if ( parentModule )
-        {
-            throw new Error('CoreModule has already been loaded. Import this module in the AppModule only.');
+        if (parentModule) {
+            throw new Error(
+                'CoreModule has already been loaded. Import this module in the AppModule only.'
+            );
         }
     }
 }
