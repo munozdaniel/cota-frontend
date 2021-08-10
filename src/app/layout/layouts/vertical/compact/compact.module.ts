@@ -7,7 +7,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { FuseFullscreenModule } from '@fuse/components/fullscreen';
 import { FuseNavigationModule } from '@fuse/components/navigation';
-import { LanguagesModule } from 'app/layout/common/languages/languages.module';
 import { MessagesModule } from 'app/layout/common/messages/messages.module';
 import { NotificationsModule } from 'app/layout/common/notifications/notifications.module';
 import { SearchModule } from 'app/layout/common/search/search.module';
@@ -17,10 +16,8 @@ import { SharedModule } from 'app/shared/shared.module';
 import { CompactLayoutComponent } from 'app/layout/layouts/vertical/compact/compact.component';
 
 @NgModule({
-    declarations: [
-        CompactLayoutComponent
-    ],
-    imports     : [
+    declarations: [CompactLayoutComponent],
+    imports: [
         HttpClientModule,
         RouterModule,
         MatButtonModule,
@@ -29,18 +26,13 @@ import { CompactLayoutComponent } from 'app/layout/layouts/vertical/compact/comp
         MatMenuModule,
         FuseFullscreenModule,
         FuseNavigationModule,
-        LanguagesModule,
         MessagesModule,
         NotificationsModule,
         SearchModule,
         ShortcutsModule,
         UserModule,
-        SharedModule
+        SharedModule,
     ],
-    exports     : [
-        CompactLayoutComponent
-    ]
+    exports: [CompactLayoutComponent],
 })
-export class CompactLayoutModule
-{
-}
+export class CompactLayoutModule {}
