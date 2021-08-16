@@ -42,7 +42,7 @@ export const appRoutes: Route[] = [
                     ).then((m) => m.AuthForgotPasswordModule),
             },
             {
-                path: 'reset-password',
+                path: 'reset-password/:id',
                 loadChildren: () =>
                     import(
                         'app/features/auth/reset-password/reset-password.module'

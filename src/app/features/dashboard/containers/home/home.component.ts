@@ -1,20 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  template: `
-    <p>
-      home works!
-    </p>
-  `,
-  styles: [
-  ]
+    selector: 'app-home',
+    template: `
+        <p>LLamando a mis dumb components</p>
+        <app-home-seccion> </app-home-seccion>
+    `,
+    styles: [],
 })
 export class HomeComponent implements OnInit {
+    constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+    ngOnInit(): void {}
 }
